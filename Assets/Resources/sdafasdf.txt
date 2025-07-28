@@ -1,0 +1,8 @@
+공격 타입 랜덤으로.
+더미 애너미 - 캡슐이나 박스로 해도 됨.
+카메라 -> 캐릭터 따라다님. 탑뷰. 65도.
+공격 시 이팩트 추가.
+더미 -> 팩토리 이용해 스폰 관리.
+
+
+https://drive.google.com/drive/folders/115Rbfw_S9YajQvNdlVLMc-cDtjxhZWP4
