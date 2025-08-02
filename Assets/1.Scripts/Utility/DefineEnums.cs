@@ -26,4 +26,25 @@ namespace DefineEnums
         UnitFollow
     }
     #endregion [카메라]
+
+
+    #region [테이블]
+    public enum TableType
+    {
+        BaseData,
+        UnitData
+    }
+
+    public enum AllIndexType
+    {
+        INDEX,
+        HP,
+        ARMOR,
+        ATTACKCOOLTIME,
+        DAMAGE,
+        RANGE,
+
+        Max
+    }
+    #endregion [테이블]
 }

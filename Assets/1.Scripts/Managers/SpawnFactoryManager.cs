@@ -6,6 +6,9 @@ public class SpawnFactoryManager : MonoBehaviour
     [SerializeField] int _SpawnMaxCount;
     [SerializeField] float _SpawnInterval;
 
+
+    //[SerializeField] UnitBase[] spawnedUnit;
+
     GameObject _prefabEnemy;
 
     float _currentDelay;
@@ -16,6 +19,12 @@ public class SpawnFactoryManager : MonoBehaviour
     {
         spawnPositions = GetComponentsInChildren<Transform>();
         _prefabEnemy = Resources.Load<GameObject>("Enemy/monster");
+
+        //foreach (var item in spawnedUnit)
+        //{
+        //    item.InitUnit(0);
+        //}
+
     }
 
     public void Update()

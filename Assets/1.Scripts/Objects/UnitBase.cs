@@ -1,6 +1,7 @@
+using DefineEnums;
+using DefineStatus;
 using UnityEngine;
 using UnityEngine.AI;
-using DefineStatus;
 
 public class UnitBase : MonoBehaviour
 {
@@ -20,7 +21,12 @@ public class UnitBase : MonoBehaviour
 
         _index = unitIndex;
 
-        _baseStatus = new BaseStatus { _armor = 1, _currentHp = 25, _maxHp = 25 };
+        TableBase table = IngameManager.Instance.TableManager.TableDict[TableType.BaseData];
+
+        int hp = table.ToInt(_index, AllIndexType.HP);
+        float armor = table.ToFloat(_index, AllIndexType.ARMOR);
+
+        _baseStatus = new BaseStatus { _armor = armor, _currentHp = hp, _maxHp = hp };
     }
 
     public void Damage(float damage)
@@ -35,7 +41,7 @@ public class UnitBase : MonoBehaviour
     }
     public void OnDie()
     {
-        Destroy(this);
+        Destroy(gameObject);
     }
 
 }
